@@ -27,7 +27,7 @@ console.log("Su numero tiene " + text.length + " digitos.");
 // EJERCICIO 6
 
 let text = prompt("Ingrese una palabra.");
-console.log("Su palabra termina con la letra: " + text.charAt(text.length-1);
+console.log("Su palabra termina con la letra: " + text.charAt(text.length-1));
 
 // EJERCICIO 7
 
