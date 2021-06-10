@@ -44,3 +44,9 @@ console.log("Verificar si el texto ingresado contiene la letra " + letra + ": " 
 
 let texto = prompt("Ingrese un texto, se le borrara la primer letra. ")
 alert(text.slice(1,));
+
+// EJERCICIO 10
+
+let nombre = prompt("Ingrese su nombre en minuscula.").toLowerCase();
+alert("Su nombre es: " + nombre.charAt(0).toUpperCase() + nombre.slice(1));
+
