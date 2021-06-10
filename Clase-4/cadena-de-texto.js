@@ -27,12 +27,12 @@ console.log("Su numero tiene " + text.length + " digitos.");
 // EJERCICIO 6
 
 let text = prompt("Ingrese una palabra.");
-console.log("Su palabra termina con la letra: " + text.charAt(length - 1));
+console.log("Su palabra termina con la letra: " + text.charAt(text.length-1);
 
 // EJERCICIO 7
 
 let text = prompt("Ingrese un texto.");
-console.log(text.replace(" ", "*"));
+console.log(text.replaceAll(" ", "*"));
 
 // EJERCICIO 8
 
@@ -41,3 +41,6 @@ let text = prompt("Ingrese un texto.");
 console.log("Verificar si el texto ingresado contiene la letra " + letra + ": " + text.includes(letra));
 
 // EJERCICIO 9
+
+let texto = prompt("Ingrese un texto, se le borrara la primer letra. ")
+alert(text.slice(1,));
