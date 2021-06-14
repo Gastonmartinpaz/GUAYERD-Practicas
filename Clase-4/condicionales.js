@@ -266,3 +266,10 @@ switch (mes) {
         alert("Por favor, ingrese un numero del 1 al 12")
         break;
 }
+
+if (mes === 1) {
+    alert("Enero");
+}
+
+
+
