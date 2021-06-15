@@ -18,7 +18,7 @@ se le debe otorgar.
 
 */
 
-let opcion = parseInt(prompt("1.Cobrar. \n 2.Retirar dinero de la caja. \n 3.Ver balance de caja. \n 4.Ver los montos totales de todas las operaciones realizadas. \n 5.Salir"));
+let opcion = parseInt(prompt("1.Cobrar.\n 2.Retirar dinero de la caja. \n 3.Ver balance de caja. \n 4.Ver los montos totales de todas las operaciones realizadas. \n 5.Salir"));
 let total = 0;
 // let preciosIndividuales = '';
 let precioProducto = 0;
