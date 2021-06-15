@@ -42,5 +42,3 @@ if (opcion === 1){
     } 
     alert("El total de su cuenta es de $ " + total);
 }
-
-
