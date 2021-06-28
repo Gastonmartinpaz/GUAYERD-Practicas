@@ -2,47 +2,54 @@
 // Crear una función que reciba tu edad y retorne tu edad en años perro. (Multiplicado por 7).
 
 // let edad = parseInt(prompt("Ingrese su edad: "));
+// let edad2 = parseInt(prompt("Ingrese la edad de su tio: "));
 
-// function calculoEdad(num1, num2){
-//     return edad * 7;
+// function calculoEdad(numero){
+//     return numero * 7;
 // }
 
-// console.log(calculoEdad());
-
+// console.log(calculoEdad(edad));
+// console.log(calculoEdad(edad2));
 
 // EJERCICIO 2
 // Crear una función que reciba un nombre y devuelva un saludo.
 
 // let nombre = prompt("Ingrese su nombre");
 
-// function saludo(){
-//     alert("Hola " + nombre);
+// function saludo(name){
+//     return "Hola " + name ;
 // }
 
-// saludo();
+// console.log(saludo(nombre));
 
 
 // EJERCICIO 3
 // Crear una función que salude.
 
+// function saludo(){
+//     return "Hola"
+// }
+
+// console.log(saludo());
 
 // EJERCICIO 4
 // Crear una función que reciba los parámetros, la temperatura y el sistema (Farenheit o Celsius), y devuelva la temperatura transformada al otro sistema. (Si recibe Farenheit, devolver Celsius, si recibe Celsius devolver Farenheit).
 
-// let temperatura = parseInt(prompt("Ingrese una valor de temperatura: "));
 // let sistemaMedicion = parseInt(prompt("Ingrese si la temperatura ingresada es: \n 1) Grados Celsius. \n 2) Grados Fahrenheit."));
+// let temperatura = parseInt(prompt("Ingrese una valor de temperatura: "));
 
-// function conversionGrados(numero1, numero2){
-//     if (sistemaMedicion === 1){
+
+// function conversionGrados(temp, sist){
+//     if (sist === 1){
 //         // Convierte de celsius a fahrenheit
-//         return (temperatura * 1.8) + 32
-//     } else if (sistemaMedicion === 2) {
+//         return (temp * 1.8) + 32
+//     } else if (sist === 2) {
 //         // Convierte de fahrenheit a celsius
-//         return (temperatura - 32) / 1.8
+//         return (temp - 32) / 1.8
 //     }
 // }
 
-// alert(conversionGrados());
+// alert(conversionGrados(temperatura, sistemaMedicion));
 
 
 // EJERCICIO 5
@@ -53,60 +60,72 @@
 // 50 → 100
 // 11 → 22
 
+// let numero = parseInt(prompt("Ingrese un numero"));
+
+// function calculo(num){
+//     let fact; // Factorial
+//     if (num>=5 && num<=10){
+//         fact = 1;
+//         for(i=1; i<=num; i++){
+//             fact = fact * i;
+//         } console.log(fact);
+//     } else if (num < 0 ){
+//         return num * (-1);
+//     } else if (num > 10){
+//         return num * 2;
+//     } else {
+//         return num;
+//     }
+// }
+
+// console.log(calculo(numero));
+
+
+
 // EJERCICIO 6
 // Rehacer el ejercicio 12 de condicionales utilizando funciones para validar edad y cobrar.
 
 
 // let edadUsuario = parseInt(prompt("Ingrese su edad."));
-// let bebidaUsuario = prompt("Ingrese una bebida (Cerveza, jugo o agua.");
+// let bebidaUsuario = parseInt(prompt("Seleccione la bebida que va a tomar: \n 1)Cerveza. \n 2)Jugo. \n 3)Agua."));
 
 // const cerveza = 50;
 // const agua = 20;
 // const jugo = 35;
-// let costo = 0;
-// let dineroUsuario
 
-// if (edadUsuario < 18 && bebidaUsuario == "cerveza") {
-//     alert("Usted es menor de edad, no puede beber alcohol.")
-
-// } else if (edadUsuario >= 18) { 
-//     if (bebidaUsuario == "cerveza") {
-//         alert("El costo de su bebida es de $50")
-//         costo = cerveza
-//         dineroUsuario = parseInt(prompt("Con cuanto va a abonar?"));
-//         if (dineroUsuario < costo) {
-//             alert("Usted no tiene dinero para pagar la bebida.");
-//         } else {
-//             costo = dineroUsuario - cerveza
-//             alert("Su vuelto es de $" + costo);
-//         }
+// function validarEdad(edad){
+//     if(edad>=18){
+//         return true;
+//     } else if(edad<18){
+//         return alert("Usted es menor de edad, no puede beber alcohol.");
 //     }
+// }
 
-//     if (bebidaUsuario == "agua") {
-//         alert("El costo de su bebida es de $20")
-//         costo = agua
-//         dineroUsuario = parseInt(prompt("Con cuanto va a abonar?"));
-//         if (dineroUsuario < costo) {
-//             alert("Usted no tiene dinero para pagar la bebida.");
-//         } else {
-//             costo = dineroUsuario - agua
-//             alert("Su vuelto es de $" + costo);
-//         }
+// function cobroBebida(cost){
+//     dinero = parseInt(prompt("Con cuanto va a abonar?"));
+//     if(dinero<cost){
+//         return alert("Usted no tiene dinero para pagar la bebida");
+//     } else {
+//         cost = dinero - cost;
+//         alert("Su vuelto es de $" + cost);
 //     }
+// }
 
-//     if (bebidaUsuario == "jugo") {
-//         alert("El costo de su bebida es de $35")
-//         costo = jugo
-//         dineroUsuario = parseInt(prompt("Con cuanto va a abonar?"));
-//         if (dineroUsuario < costo) {
-//             alert("Usted no tiene dinero para pagar la bebida.");
-//         } else {
-//             costo = dineroUsuario - jugo
-//             alert("Su vuelto es de $" + costo);
-//         }
-//     }
+// if (edadUsuario < 18 && bebidaUsuario === 1){
+//     validarEdad(edadUsuario);
+// } else if (edadUsuario >= 18 && bebidaUsuario === 1){
+//     validarEdad(edadUsuario);
+//     alert("El costo de su bebida es de $" + cerveza);
+//     cobroBebida(cerveza);
+// } else if (bebidaUsuario === 2) {
+//     alert("El costo de su bebida es de $" + jugo);
+//     cobroBebida(jugo);
+// } else if (bebidaUsuario === 3) {
+//     alert("El costo de su bebida es de $" + agua);
+//     cobroBebida(agua);
+// }
 
-// } 
+ 
 
 // EJERCICIO 7
 // Crear una función que reciba tres parámetros: Horas, minutos y segundos, y devolver todo pasado a segundos.
@@ -115,39 +134,45 @@
 // let minutos = parseInt(prompt("Ingrese una cantidad en minutos: "));
 // let segundos = parseInt(prompt("Ingrese una cantidad en segundos: "));
 
-// function transformacionSegundos(num1, num2, num3){
-//     return (horas * 3600) + (minutos * 60) + segundos;  
+// function transformacionSegundos(hor, min, seg){
+//     return (hor * 3600) + (min * 60) + seg;  
 // }
 
-// alert("Lo que ingresó pasado a segundos es = " + transformacionSegundos() + "s");
+// alert("Lo que ingresó pasado a segundos es = " + transformacionSegundos(horas, minutos, segundos) + "s");
 
 // EJERCICIO 8
 // Realizar una función de carga de notas en un array. Luego realizar otra función que calcule el promedio de todas y lo devuelva.
 
-let nota;
-let notasUsuario = [];
 
 // Duda de cuando poner un parametro o no
-function cantidadNotas(){
-    do {
-        nota = parseInt(prompt("Ingrese una nota. (Pulse '0' para terminar de ingresar numeros.')"));
-        notasUsuario.push(nota);       
-    } while (nota !== 0);
-}
 
-let total = 0;
-function sumaNotas(){
-    for(i=0; i<notasUsuario.length; i++){
-        total += notasUsuario[i];
-    }
-}
+// let array = [];
 
-let promedio;
-function promedioFinal(){
-    return promedio = total / notasUsuario.length
-}
+// function cantidadNotas(){
+//     do {
+//         notas = parseInt(prompt("Ingrese una nota. (Pulse '0' para terminar de ingresar numeros.')"));
+//         array.push(notas);       
+//     } while (notas !== 0);
+//     array.pop();
+//     return array;
+// }
 
-alert("El promedio final es de " + promedioFinal());
+// function promedio(){
+//     let total = 0;
+//     for(i=0; i<cantidadNotas().length; i++){
+//         total += array[i];
+//     }
+//     console.log("El promedio final es igual a: " + total / (array.length-1));
+// }
+
+// promedio();
+
+// let promedio;
+// function promedioFinal(){
+//     return promedio = total / notasUsuario.length
+// }
+
+// alert("El promedio final es de " + promedioFinal());
 
 // let nota;
 // let notasUsuario = [];
@@ -160,4 +185,3 @@ alert("El promedio final es de " + promedioFinal());
 //     }
 // }
 
-// console.log(notasUsuario());
