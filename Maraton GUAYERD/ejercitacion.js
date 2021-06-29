@@ -200,14 +200,48 @@
 // - Si el grupo tiene más de 4 adultos, se hará un 10% al total de la factura. 
 // Mostrar por pantalla la cantidad de comensales y el costo total a pagar. 
 
-const ej9restaurant = [25,17,18,44,12,9,36,50]
+// const ej9restaurant = [25,17,18,44,12,9,36,50]
 
-function edad(numero){
-    if(numero >= 18){
-        return 700;
-    } else if(numero < 18){
-        return 450;
-    }
-}
+// function edad(numero){
+//     if(numero >= 18){
+//         return 700;
+//     } else if(numero < 18){
+//         return 450;
+//     }
+// }
 
-let total=0;
+// let total=0;
+// let mayor=[]; // array mayor para despues comparar y ver cuantos mayores hay
+// for(i=0; i<ej9restaurant.length; i++){
+//     total = edad(ej9restaurant[i]) + total; // contador usando la function edad, si es mayor se aplica $700 y si es mejor $450
+//     if(ej9restaurant[i] >= 18){
+//         mayor.push(ej9restaurant[i]); // recorriendo el array original, si un numero es mayor a 18, guarda ese valor en el array 'mayor'.
+//     }
+// }
+
+// if(mayor.length > 4){
+//     alert("Como son más de 4 comensales adultos, les corresponde descuento del 10%")
+//     total = total * 0.9;
+// }
+
+// alert("Cantidad de comensales: " + ej9restaurant.length + "\nEl total de la factura es de: $" + total);
+
+
+// EJERCICIO 10
+// De un consultorio médico nos piden automatizar el proceso de recepción de los pacientes. 
+//   Para ello:
+//   - Ingresar código de paciente (Number XXX, 3 dígitos de 1 a 999).
+//   - Si el código ingresado esta entre 1 y 99, es un paciente VIP.
+//     - Preguntarles "Como valoran la calidad del servicio? (1..10)". Guardar el resultado ingresado.
+//     - Agregar el código de paciente adelante en la cola (array) de turnos
+//   - Si el código ingresado esta entre 100 y 500, es un paciente de prepaga.
+//     - Agregar el código de paciente al final de la cola (array) de turnos
+//   - Si el código ingresado esta entre 501 y 999, es un paciente nuevo.
+//     - Preguntarles "Desea pasarse a VIP?". Si la respuesta es afirmativa, guardar el código de paciente.
+//     - Agregar el código de paciente al final de la cola (array) de turnos
+    
+//   - Si todos los pacientes fueron ingresados, informar en pantalla:
+//     - Calidad del servicio VIP. Informar valor promedio, valor máximo y valor mínimo.
+//     - Ingreso al consultorio: Mostrar en pantalla el orden de ingreso x código de paciente.
+//     - Pasarse a VIP: Mostrar en pantalla todos los códigos de pacientes que desean ser VIP
+
