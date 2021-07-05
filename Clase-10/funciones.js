@@ -244,18 +244,23 @@
 // Ejemplo: Paso por parámetro “4” a la función.
 // Luego ingreso 4 números: 30,15,11,14. El array final debe ser: 90,45,33,42.
 
-// let numeros = [];
-// let cantidad = parseInt(prompt("Ingrese la cantidad de numeros a ingresar: "));
+let numeros = [];
+let cantidad = parseInt(prompt("Ingrese la cantidad de numeros a ingresar: "));
 
-// function cantidadNumeros(cantidad){
-//     for(i=0; i<cantidad; i++){
-//         ingreso = parseInt(prompt("Ingrese un número")) * 3;
-//         numeros.push(ingreso);
-//     }
-//     return numeros;
-// }
+function triplicar(n){
+    return n * 3;
+}
 
-// console.log(cantidadNumeros(cantidad));
+function cantidadNumeros(cantidad){
+    for(i=0; i<cantidad; i++){
+        ingreso = parseInt(prompt("Ingrese un número"));
+        ingreso = triplicar(ingreso);
+        numeros.push(ingreso);
+    }
+    return numeros;
+}
+
+console.log(cantidadNumeros(cantidad));
 
 
 // EJERCICIO 12
