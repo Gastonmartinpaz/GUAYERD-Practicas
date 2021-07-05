@@ -140,48 +140,123 @@
 
 // alert("Lo que ingresó pasado a segundos es = " + transformacionSegundos(horas, minutos, segundos) + "s");
 
+
 // EJERCICIO 8
 // Realizar una función de carga de notas en un array. Luego realizar otra función que calcule el promedio de todas y lo devuelva.
 
-
-// Duda de cuando poner un parametro o no
-
-// let array = [];
-
 // function cantidadNotas(){
+//     let array = [];
 //     do {
 //         notas = parseInt(prompt("Ingrese una nota. (Pulse '0' para terminar de ingresar numeros.')"));
 //         array.push(notas);       
-//     } while (notas !== 0);
+//     } while (notas != 0);
 //     array.pop();
-//     return array;
+//     return promedio(array);
 // }
 
-// function promedio(){
+// function promedio(array){
 //     let total = 0;
-//     for(i=0; i<cantidadNotas().length; i++){
-//         total += array[i];
+//     for(i=0; i<array.length; i++){
+//         total = total + (array[i]);
 //     }
-//     console.log("El promedio final es igual a: " + total / (array.length-1));
+//     console.log("El promedio final es igual a: " + (total/(array.length)));
 // }
 
-// promedio();
+// cantidadNotas();
 
-// let promedio;
-// function promedioFinal(){
-//     return promedio = total / notasUsuario.length
+
+// EJERCICIO 9
+// Escribir una función para cobrar en caja. Agregando funciones que: 
+// * Si no es cliente A, agregue el IVA. 
+// * Se solicite un monto de descuento a aplicar, y lo aplique.
+// * Finalmente, realice el cobro solicitando al usuario con cuánto desea abonar.
+
+// function cobro(){
+//     producto = parseInt(prompt("Ingrese el precio del producto: ")); 
+//     return iva(producto);
 // }
 
-// alert("El promedio final es de " + promedioFinal());
-
-// let nota;
-// let notasUsuario = [];
-// let cantidadNotas = parseInt(prompt("Ingrese la cantidad de notas que va a ingresar: "));
-
-// function sumaNotas(nums){
-//     for(i=0; i<notasUsuario; i++){
-//         nota = parseInt(prompt("Ingrese una nota: "));
-//         notasUsuario.push(nota);
+// function iva(producto){
+//     cliente = parseInt(prompt("Usted es cliente 'A'?: \n 1) Si (Presione '1'). \n 2) No (Presione '2')"));
+//     total = producto;
+//     if(cliente === 2 ){
+//         total = producto * 1.21;  
 //     }
+//     return descuento(total);
 // }
 
+// function descuento(total){
+//     monto = parseInt(prompt("Ingrese un monto de descuento a aplicar"));
+//     total = total - monto;
+//     return totalAbonar(total);
+// }
+
+// function totalAbonar(total){
+//     aPagar = parseInt(prompt("Con cuanto dinero va a abonar?"));
+//     console.log("El total es de $" + total);
+//     vuelto = total;
+//     vuelto = aPagar - vuelto;
+//     console.log("Su vuelto es de $" + vuelto);
+// }
+
+// cobro();
+
+
+// EJERCICIO 10
+// Vamos a realizar (intentando no llorar) un conversor de monedas. Primero vamos a generar una función que reciba dos parámetros, tipo de moneda y monto y la convierta a pesos. (Tipos de moneda aceptados dólares, euros y reales). 
+// Luego vamos a realizar una función que llame a esta función dos veces, con parámetros diferentes, sume ambos valores y devuelva el resultado.
+// Ejemplo: us$4, €3. Devuelve el total de: $1180. (Dificil no llorar a este punto). 
+
+
+// const dolarPeso = 95.52;
+// const euroPeso = 113.26;
+// const realPeso = 18.88;
+
+// function conversorMoneda(){
+//     moneda = parseInt(prompt("Seleccione la moneda a convertir en pesos: \n1) Dólares. \n2) Euros. \n3) Reales."));
+//     monto = parseInt(prompt("Ingrese el monto a convertir: "));
+
+//     if(moneda === 1){
+//         monto = monto * dolarPeso;
+//     } else if(moneda === 2){
+//         monto = monto * euroPeso;
+//     } else if(moneda === 3){
+//         monto = monto * realPeso;
+//     }
+//     return monto;
+// }
+
+// function conversor2(){
+//         total = 0;
+//         let confirmar = true;
+//         while(confirmar){
+//             total = conversorMoneda() + total;
+//             confirmar = confirm("Desea hacer otra conversion?");  
+//         }
+//         console.log(total);
+//     }
+
+// conversor2();
+
+
+// EJERCICIO 11
+// Crear una función con 1 parámetro cantidad de números, que pida iterativamente la cantidad de veces ingresada. Ejemplo si por parámetro le paso 5, que pida 5 números. En cada iteración aplicarle a cada número y una función que los triplique. Guardar todos los resultados en un array.
+// Ejemplo: Paso por parámetro “4” a la función.
+// Luego ingreso 4 números: 30,15,11,14. El array final debe ser: 90,45,33,42.
+
+// let numeros = [];
+// let cantidad = parseInt(prompt("Ingrese la cantidad de numeros a ingresar: "));
+
+// function cantidadNumeros(cantidad){
+//     for(i=0; i<cantidad; i++){
+//         ingreso = parseInt(prompt("Ingrese un número")) * 3;
+//         numeros.push(ingreso);
+//     }
+//     return numeros;
+// }
+
+// console.log(cantidadNumeros(cantidad));
+
+
+// EJERCICIO 12
+// Realizar una función que pida la temperatura máxima y mínima del día, indicando magnitud y medida (Farenheit o Celsius), y mostrar la temperatura media (promedio de ambas), en ambos sistemas.
