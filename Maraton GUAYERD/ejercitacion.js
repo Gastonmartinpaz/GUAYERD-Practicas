@@ -79,17 +79,21 @@
 //     return potencia;    
 // }
 
-// if(operacion===1){
-//     alert("El resultado de su suma es: " + suma(numero1, numero2));
-// } else if(operacion===2){
-//     alert("El resultado de su resta es: " + resta(numero1, numero2));
-// } else if(operacion===3){
-//     alert("El resultado de su multiplicacion es: " + multiplicacion(numero1, numero2));
-// } else if(operacion===4){
-//     alert("El resultado de su division es : " + division(numero1, numero2));
-// } else if(operacion===5){
-//     alert("El resultado de su potencia es: " + potencia(numero1, numero2));
+// function resultado(numero){
+//     if(numero===1){
+//         alert("El resultado de su suma es: " + suma(numero1, numero2));
+//     } else if(numero===2){
+//         alert("El resultado de su resta es: " + resta(numero1, numero2));
+//     } else if(numero===3){
+//         alert("El resultado de su multiplicacion es: " + multiplicacion(numero1, numero2));
+//     } else if(numero===4){
+//         alert("El resultado de su division es : " + division(numero1, numero2));
+//     } else if(numero===5){
+//         alert("El resultado de su potencia es: " + potencia(numero1, numero2));
+//     }
 // }
+
+// resultado(operacion);
 
 
 // EJERCICIO 5
@@ -152,9 +156,9 @@
 // function alumnos(){
 //     let array = [];
 //     do{
-//         datos = prompt("Ingrese nombre del alumno: (Presione '0' para dejar de cargar datos)");
+//         datos = prompt("Ingrese nombre del alumno: (Presione 'q' para dejar de cargar datos)");
 //         array.push(datos);
-//     } while (datos !== 'q')
+//     } while (datos != 'q')
 //     array.pop();
 //     return array;
 // }
@@ -168,7 +172,7 @@
 // const ej7Nombres = ["goku","mario","melchor","mafalda","cacho","hermione","tony","pappo","leia","homero"];
 
 // for(i=0; i<ej7Nombres.length; i++){
-//     console.log("Posicion: " + i + " / Nombre: " + ej7Nombres[i] + " / Primera letra: " + ej7Nombres[i].charAt(0).toUpperCase());
+//     console.log("Posicion: " + i + " / Nombre: " + ej7Nombres[i] + " / Primera letra mayúscula: " + ej7Nombres[i].charAt(0).toUpperCase() + ej7Nombres[i].slice(1));
 // }
 
 
@@ -201,12 +205,14 @@
 // Mostrar por pantalla la cantidad de comensales y el costo total a pagar. 
 
 // const ej9restaurant = [25,17,18,44,12,9,36,50]
+// const menuAdulto = 700;
+// const menuMenor = 450;
 
 // function edad(numero){
 //     if(numero >= 18){
-//         return 700;
+//         return menuAdulto;
 //     } else if(numero < 18){
-//         return 450;
+//         return menuMenor;
 //     }
 // }
 
@@ -245,3 +251,71 @@
 //     - Ingreso al consultorio: Mostrar en pantalla el orden de ingreso x código de paciente.
 //     - Pasarse a VIP: Mostrar en pantalla todos los códigos de pacientes que desean ser VIP
 
+let turnos = [];
+let servicio = [];
+let vip = [];
+
+function recepcion(){
+    seguir = true;
+    while(seguir){
+        let codigo = parseInt(prompt("Ingresar codigo de paciente (Del '1' al '999')"));
+        if(codigo >= 1 && codigo <= 99){
+            alert("Es paciente VIP");
+            let calidadServicio = parseInt(prompt("Como valora la calidad del servicio? (Del 1 al 10)"));
+            servicio.push(calidadServicio);
+            turnos.unshift(codigo);
+        } else if(codigo >= 100 && codigo <= 500){
+            alert("Es paciente de prepaga");
+            turnos.push(codigo);
+        } else if(codigo >= 501 && codigo <= 999){
+            alert("Es paciente nuevo");
+            let preguntaVip = prompt("Desea pasarse a VIP? Teclear S/N").toUpperCase();
+                if(preguntaVip == 'S'){
+                    vip.push(codigo);
+                }
+            turnos.push(codigo);
+        } else{
+            alert("Ingrese un codigo de paciente valido.");
+        }
+
+        seguir = confirm("Desea ingresar otro paciente?");
+    }
+}
+
+function promedio(serv){
+    let total = 0;
+    for(i=0; i<serv.length; i++){
+        total = (serv[i]) + total;
+    }
+    prom = total / serv.length;
+    console.log("El promedio del servicio es de " + prom);
+
+    let max = 0;
+    for(i=0; i<serv.length; i++){
+        if((serv[i]) > max){
+            max = (serv[i]);
+        } 
+    }
+    console.log("El valor máximo es " + max);
+
+    let min = 10;
+    for(i=0; i<serv.length; i++){
+        if((serv[i]) < min){
+            min = (serv[i]);
+        }
+    }
+    console.log("El valor minimo es " + min);
+}
+
+function ingreso(turn){
+    alert("Orden de ingreso de pacientes: " + turn);
+}
+
+function codigosPac(pacVip){
+    alert("Los pacientes que quieren ser VIP son: " + pacVip);
+}
+
+recepcion();
+promedio(servicio);
+ingreso(turnos);
+codigosPac(vip);
