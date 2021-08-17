@@ -244,24 +244,25 @@
 // Ejemplo: Paso por parámetro “4” a la función.
 // Luego ingreso 4 números: 30,15,11,14. El array final debe ser: 90,45,33,42.
 
-let numeros = [];
-let cantidad = parseInt(prompt("Ingrese la cantidad de numeros a ingresar: "));
+// let numeros = [];
+// let cantidad = parseInt(prompt("Ingrese la cantidad de numeros a ingresar: "));
 
-function triplicar(n){
-    return n * 3;
-}
+// function triplicar(n){
+//     return n * 3;
+// }
 
-function cantidadNumeros(cantidad){
-    for(i=0; i<cantidad; i++){
-        ingreso = parseInt(prompt("Ingrese un número"));
-        ingreso = triplicar(ingreso);
-        numeros.push(ingreso);
-    }
-    return numeros;
-}
+// function cantidadNumeros(cantidad){
+//     for(i=0; i<cantidad; i++){
+//         ingreso = parseInt(prompt("Ingrese un número"));
+//         ingreso = triplicar(ingreso);
+//         numeros.push(ingreso);
+//     }
+//     return numeros;
+// }
 
-console.log(cantidadNumeros(cantidad));
+// console.log(cantidadNumeros(cantidad));
 
 
 // EJERCICIO 12
 // Realizar una función que pida la temperatura máxima y mínima del día, indicando magnitud y medida (Farenheit o Celsius), y mostrar la temperatura media (promedio de ambas), en ambos sistemas.
+

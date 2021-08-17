@@ -1,0 +1,35 @@
+.rojo{
+    color: red;
+}
+
+.verde{
+    color: green;
+}
+
+.azul{
+    color: blue;
+}
+
+.amarillo{
+    color: yellow
+}
+
+.negro{
+    color: black;
+}
+
+p.blanco{
+    color: white;
+}
+
+.verdeNotas{
+    background-color: green;
+}
+
+.rojoNotas{
+    background-color: red;
+}
+
+.amarilloNotas{
+    background-color: yellow;
+}

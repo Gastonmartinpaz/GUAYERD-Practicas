@@ -87,40 +87,44 @@
 
 // EJERCICIO 5
 // Crear un array de 8 posiciones con números enteros  y mostrar:
-let numeros = [10, 5, 9, 45, 15, 2, 8, 12, 4];
+// let numeros = [10, 5, 9, 45, 15, 2, 8, 12, 4];
 
-// Su longitud
-console.log(numeros.length);
+// // Su longitud
+// console.log(numeros.length);
 
-// Solo las posiciones impares.
-for(i=0; i<numeros.length; i++){
-    if(i%2 == 1){
-        console.log(numeros[i]);
-    }
-}
+// // Solo las posiciones impares.
+// for(i=0; i<numeros.length; i++){
+//     if(i%2 == 1){
+//         console.log(numeros[i]);
+//     }
+// }
 
-// Solo los NUMEROS impares.
+// // Solo los NUMEROS impares.
 
-for(i=0; i<numeros.length; i++){
-    if((numeros[i] % 2) == 1){
-        console.log(numeros[i]);
-    }
-}
+// for(i=0; i<numeros.length; i++){
+//     if((numeros[i] % 2) == 1){
+//         console.log(numeros[i]);
+//     }
+// }
 
-// El mayor de ellos
+// // El mayor de ellos
 
-let mayor = 0;
-for(i=0; i<numeros.length; i++){
-    if((numeros[i]) > mayor){
-        mayor = (numeros[i]);
-    }
-}
-console.log(mayor);
+// let mayor = 0;
+// for(i=0; i<numeros.length; i++){
+//     if((numeros[i]) > mayor){
+//         mayor = (numeros[i]);
+//     }
+// }
+// console.log(mayor);
 
-// Mostrar la mitad de elementos del array. (Pensar esto como si no supieramos la cantidad de posiciones que tiene.)
+// // Mostrar la mitad de elementos del array. (Pensar esto como si no supieramos la cantidad de posiciones que tiene.)
 
-let mitad = (numeros.length) / 2;
-for(i=0; i<mitad; i++){
-    console.log(numeros[i]);
-}
+// let mitad = (numeros.length) / 2;
+// for(i=0; i<mitad; i++){
+//     console.log(numeros[i]);
+// }
 
+
+
+
+  
